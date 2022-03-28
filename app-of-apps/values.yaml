@@ -1,0 +1,21 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  default:
+    repoURL: https://github.com/argoproj/argocd-example-apps
+    helm:
+      valueFiles:
+        - values.yaml
+  source:
+    targetRevision: HEAD
+  gitops:
+    applications:
+      gitOpsGatekeeper:
+        appPath: 'applications/gatekeeper'
+        namespace: 'gatekeeper-system'
+        isEnabled: true
+        isEnabedAutoSync: true
+      gitOpsGatekeeper:
+        appPath: 'applications/ingress-nginx'
+        isEnabled: true
+        isEnabedAutoSync: true
