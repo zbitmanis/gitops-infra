@@ -24,7 +24,7 @@ spec:
   syncPolicy:
     automated: {}
     retry:
-      limit: {{ .Values.spec.gitops.sync.limit | default 5 }}
+      limit: 5
       backoff:
         duration: 5s 
         factor: 2
