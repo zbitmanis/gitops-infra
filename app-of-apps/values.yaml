@@ -15,7 +15,7 @@ spec:
         namespace: 'gatekeeper-system'
         isEnabled: true
         isEnabedAutoSync: true
-      gitOpsGatekeeper:
+      gitOpsIngressNgin:
         appPath: 'applications/ingress-nginx'
         isEnabled: true
         isEnabedAutoSync: true
