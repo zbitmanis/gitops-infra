@@ -10,7 +10,7 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: ingress-nginx 
-  project:  {{ .Values.spec.gitops.applications.gitOpsIngressNginx.project | default default }}
+  project:  {{ .Values.spec.gitops.applications.gitOpsIngressNginx.project | .Values.spec.default.project }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsIngressNginx.appPath }}
     repoURL: {{ .Values.spec.gitops.applications.gitOpsIngressNginx.repoURL | default .Values.spec.default.repoURL }}
