@@ -10,7 +10,7 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: gatekeeper-system
-  project:  {{ .Values.spec.gitops.applications.gitOpsGatekeeper.project | .Values.spec.default.project }}
+  project:  {{ .Values.spec.gitops.applications.gitOpsGatekeeper.project | default .Values.spec.default.project }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsGatekeeper.appPath }}
     repoURL: {{ .Values.spec.gitops.applications.gitOpsGatekeeper.repoURL | default .Values.spec.default.repoURL }}
