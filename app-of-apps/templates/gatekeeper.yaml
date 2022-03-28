@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.spec.gitops.applications.gitOpsGatekeeper.namespace | default gatekeeper-system }}
+    namespace: gatekeeper-system
   project:  {{ .Values.spec.gitops.applications.gitOpsGatekeeper.project | default default }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsGatekeeper.appPath }}
