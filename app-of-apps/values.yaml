@@ -2,7 +2,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   default:
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    repoURL: https://github.com/zbitmanis/gitops-infra.git
     helm:
       valueFiles:
         - values.yaml
