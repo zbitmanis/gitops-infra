@@ -23,6 +23,8 @@ spec:
 {{- if .Values.spec.gitops.applications.gitOpsIngressNginx.isEnabedAutoSync | default false }}
   syncPolicy:
     automated: {}
+    syncOptions:
+      - CreateNamespace=true
     retry:
       limit: 5
       backoff:
