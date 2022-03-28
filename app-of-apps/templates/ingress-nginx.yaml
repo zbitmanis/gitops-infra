@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.spec.gitops.applications.gitOpsIngressNginx.namespace | default 'ingress-nginx-system' }}
+    namespace: ingress-nginx 
   project:  {{ .Values.spec.gitops.applications.gitOpsIngressNginx.project | default 'default' }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsIngressNginx.appPath }}
