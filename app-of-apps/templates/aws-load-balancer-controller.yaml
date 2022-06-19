@@ -10,11 +10,11 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: aws
-  project: {{ .Values.spec.source.gitOpsAwsLoadBalancerController.project | default "default" | quote }}
+  project: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.project |default "default" }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.appPath }}
     repoURL: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.repoURL | default .Values.spec.default.repoURL }}
-    targetRevision: {{ .Values.spec.source.gitOpsAwsLoadBalancerController.targetRevision | default .Values.spec.source.targetRevision }}
+    targetRevision: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.targetRevision | default .Values.spec.source.targetRevision }}
     helm:
       valueFiles:
           {{- range $val := .Values.spec.default.helm.valueFiles }}
