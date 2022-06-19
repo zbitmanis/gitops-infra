@@ -10,7 +10,7 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: aws
-  project: {{ .Values.spec.source.gitOpsAwsLoadBalancerController.project |default default }}
+  project: {{ .Values.spec.source.gitOpsAwsLoadBalancerController.project | default "default" | quote }}
   source:
     path: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.appPath }}
     repoURL: {{ .Values.spec.gitops.applications.gitOpsAwsLoadBalancerController.repoURL | default .Values.spec.default.repoURL }}
