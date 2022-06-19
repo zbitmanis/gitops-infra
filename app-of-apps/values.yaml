@@ -20,7 +20,7 @@ spec:
         isEnabled: true
         isEnabedAutoSync: true
       gitOpsAwsLoadBalancerController:
-        targetRevision: v1.0
+        targetRevision: v1.1
         appPath: applications/aws-load-balancer-controller
         isEnabled: true
         isEnabedAutoSync: true
