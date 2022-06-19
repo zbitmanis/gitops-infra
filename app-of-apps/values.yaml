@@ -19,3 +19,8 @@ spec:
         appPath: 'applications/ingress-nginx'
         isEnabled: true
         isEnabedAutoSync: true
+      gitOpsAwsLoadBalancerController
+        targetRevision: v1.0
+        appPath: applications/aws-load-balancer-controller
+        isEnabled: true
+        isEnabedAutoSync: true
